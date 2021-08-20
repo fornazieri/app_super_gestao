@@ -1,3 +1,15 @@
+# App Super Gestão
+Repositório criado para colocar em prática os exercicios do curso Desenvolvimento Web Avançado 2021 com PHP, Laravel e Vue.JS, da plataforma Udemy.
+
+## Checklist
+- [x] Criar algum projeto em PHP utilizando Laravel
+- [x] Aprender sobre qualquer coisa, mas aprender
+- [ ] Aprender sobre Composer
+- [ ] Aprender sobre Laravel
+
+## Documentações
+Curso (https://www.udemy.com/course/curso-completo-do-desenvolvedor-laravel/)
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
