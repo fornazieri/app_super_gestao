@@ -6,20 +6,21 @@ Repositório criado para colocar em prática os exercicios do curso Desenvolvime
 - Laravel 7.0.0
 
 ## Principais recursos vistos até o momento
-- [x] composer
-- [x] laravel
-- [x] blade
-- [x] artisan
-- [x] routes
+- composer
+- laravel
+- blade
+- artisan
+- routes
 
 ## Checklist
-- [x] Criar algum projeto em PHP utilizando Laravel
 - [x] Aprender sobre qualquer coisa, mas aprender
-- [ ] Aprender sobre Composer
-- [ ] Aprender sobre Laravel
+- [x] Criar algum projeto em PHP utilizando Laravel
+- [ ] Criar uma REST api utilizando PHP e Laravel
+- [ ] Criar uma aplicação front-end seguindo o modelo SPA
+- [ ] Persistir dados utilizando uma aplicação front-end através de comunicação por api REST desenvolvida em PHP + Laravel
 
 ## Documentações
-Curso (https://www.udemy.com/course/curso-completo-do-desenvolvedor-laravel/)
+Curso [Desenvolvimento Web Avançado 2021 com PHP, Laravel e Vue.JS](https://www.udemy.com/course/curso-completo-do-desenvolvedor-laravel/).
 
 ## License
 
