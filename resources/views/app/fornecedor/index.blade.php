@@ -26,6 +26,17 @@
 
     /*isset serve para verificar se uma variavel foi setada, se ela existe
     if(isset($variavel))*/
+
+    /*empty serve para verificar se a variavel está vazia, ou seja, nestas situações
+    ''
+    0
+    0.0
+    '0'
+    null
+    false
+    array()
+    $var
+    if(empty($variavel))*/
 @endphp
 
 {{-- Maneira de imprimir array em blade --}}
@@ -65,11 +76,23 @@ Status 2: {{ $fornecedoresMultiDimensional[1]['status'] }}
 </br>
 
 {{-- idxTesteFornecedor como indice de testes para imprimir usando isset como validação --}}
-@php $idxTesteFornecedor = 0; @endphp
+@php $idxTesteFornecedor = 2; @endphp
 @isset($fornecedoresMultiDimensional)
     Fornecedor: {{ $fornecedoresMultiDimensional[$idxTesteFornecedor]['nome'] }}</br>
     Status: {{ $fornecedoresMultiDimensional[$idxTesteFornecedor]['status'] }}</br>
-    @isset($fornecedoresMultiDimensional[$idxTesteFornecedor]['cnpj'])
-        CNPJ: {{ $fornecedoresMultiDimensional[$idxTesteFornecedor]['cnpj'] }}</br>
-    @endisset
+    {{-- @isset($fornecedoresMultiDimensional[$idxTesteFornecedor]['cnpj'])
+        CNPJ: {{ $fornecedoresMultiDimensional[$idxTesteFornecedor]['cnpj'] }}
+        @empty($fornecedoresMultiDimensional[$idxTesteFornecedor]['cnpj'])
+            - Vazio
+        @endempty
+        </br>
+    @endisset --}}
+
+    CNPJ: {{ $fornecedoresMultiDimensional[$idxTesteFornecedor]['cnpj'] ?? 'Dado não informado' }}
+    <!--
+        com o operador ?? do blade
+        $variavel testada não estiver definida (isset)
+        ou
+        $variavel testada possuir o valor null (não vazio, NULL)
+    -->
 @endisset
