@@ -13,14 +13,26 @@ class FornecedorController extends Controller
             0 => [ //exemplo completo
                 'nome' => 'Fornecedor 1', 
                 'status' => 'N',
-                'cnpj' => '00.000.000/0000-00'],
+                'cnpj' => '00.000.000/0000-00',
+                'ddd' => '11', //São Paulo (SP)
+                'telefone' => '0000-0000'],
             1 => [ //exemplo isset para cnpj
                 'nome' => 'Fornecedor 2', 
-                'status' => 'S'],
+                'status' => 'S',
+                'ddd' => '85', //Fortaleza (CE)
+                'telefone' => '1234-1234'],
             2 => [ //exemplo empty para cnpj
                 'nome' => 'Fornecedor 3', 
                 'status' => 'S',
-                'cnpj' => null]
+                'cnpj' => null,
+                'ddd' => '18', //Bilac (SP)
+                'telefone' => '2222-3333'],
+            3 => [ //exemplo sem ddd
+                'nome' => 'Fornecedor 4', 
+                'status' => 'S',
+                'cnpj' => null,
+                'ddd' => '', //Bilac (SP)
+                'telefone' => '4444-4444']
         ];
 
         //if ternario

@@ -76,7 +76,7 @@ Status 2: {{ $fornecedoresMultiDimensional[1]['status'] }}
 </br>
 
 {{-- idxTesteFornecedor como indice de testes para imprimir usando isset como validação --}}
-@php $idxTesteFornecedor = 2; @endphp
+@php $idxTesteFornecedor = 3; @endphp
 @isset($fornecedoresMultiDimensional)
     Fornecedor: {{ $fornecedoresMultiDimensional[$idxTesteFornecedor]['nome'] }}</br>
     Status: {{ $fornecedoresMultiDimensional[$idxTesteFornecedor]['status'] }}</br>
@@ -89,10 +89,29 @@ Status 2: {{ $fornecedoresMultiDimensional[1]['status'] }}
     @endisset --}}
 
     CNPJ: {{ $fornecedoresMultiDimensional[$idxTesteFornecedor]['cnpj'] ?? 'Dado não informado' }}
+    </br>
     <!--
         com o operador ?? do blade
         $variavel testada não estiver definida (isset)
         ou
         $variavel testada possuir o valor null (não vazio, NULL)
     -->
+
+    Telefone: ({{ $fornecedoresMultiDimensional[$idxTesteFornecedor]['ddd'] ?? '' }}) {{ $fornecedoresMultiDimensional[$idxTesteFornecedor]['telefone'] ?? '' }}
+    </br>
+
+    @switch($fornecedoresMultiDimensional[$idxTesteFornecedor]['ddd'])
+        @case('11')
+            São Paulo - SP
+            @break
+        @case('85')
+            Fortaleza - CE
+            @break
+        @case('18')
+            Bilac - SP
+            @break
+        @default
+            Estado não identificado
+    @endswitch
+
 @endisset
