@@ -75,43 +75,73 @@ Status 2: {{ $fornecedoresMultiDimensional[1]['status'] }}
 </br>
 </br>
 
-{{-- idxTesteFornecedor como indice de testes para imprimir usando isset como validação --}}
-@php $idxTesteFornecedor = 3; @endphp
 @isset($fornecedoresMultiDimensional)
-    Fornecedor: {{ $fornecedoresMultiDimensional[$idxTesteFornecedor]['nome'] }}</br>
-    Status: {{ $fornecedoresMultiDimensional[$idxTesteFornecedor]['status'] }}</br>
-    {{-- @isset($fornecedoresMultiDimensional[$idxTesteFornecedor]['cnpj'])
-        CNPJ: {{ $fornecedoresMultiDimensional[$idxTesteFornecedor]['cnpj'] }}
-        @empty($fornecedoresMultiDimensional[$idxTesteFornecedor]['cnpj'])
-            - Vazio
-        @endempty
+    <h3>Imprimindo com FOR</h3></br>
+    @for($i = 0; isset($fornecedoresMultiDimensional[$i]); $i++)
+        Fornecedor: {{ $fornecedoresMultiDimensional[$i]['nome'] }}</br>
+        Status: {{ $fornecedoresMultiDimensional[$i]['status'] }}</br>
+        {{-- @isset($fornecedoresMultiDimensional[$i]['cnpj'])
+            CNPJ: {{ $fornecedoresMultiDimensional[$i]['cnpj'] }}
+            @empty($fornecedoresMultiDimensional[$i]['cnpj'])
+                - Vazio
+            @endempty
+            </br>
+        @endisset --}}
+
+        CNPJ: {{ $fornecedoresMultiDimensional[$i]['cnpj'] ?? 'Dado não informado' }}
         </br>
-    @endisset --}}
+        <!--
+            com o operador ?? do blade
+            $variavel testada não estiver definida (isset)
+            ou
+            $variavel testada possuir o valor null (não vazio, NULL)
+        -->
 
-    CNPJ: {{ $fornecedoresMultiDimensional[$idxTesteFornecedor]['cnpj'] ?? 'Dado não informado' }}
-    </br>
-    <!--
-        com o operador ?? do blade
-        $variavel testada não estiver definida (isset)
-        ou
-        $variavel testada possuir o valor null (não vazio, NULL)
-    -->
+        Telefone: ({{ $fornecedoresMultiDimensional[$i]['ddd'] ?? '' }}) {{ $fornecedoresMultiDimensional[$i]['telefone'] ?? '' }}
+        </br>
 
-    Telefone: ({{ $fornecedoresMultiDimensional[$idxTesteFornecedor]['ddd'] ?? '' }}) {{ $fornecedoresMultiDimensional[$idxTesteFornecedor]['telefone'] ?? '' }}
-    </br>
+        @switch($fornecedoresMultiDimensional[$i]['ddd'])
+            @case('11')
+                São Paulo - SP
+                @break
+            @case('85')
+                Fortaleza - CE
+                @break
+            @case('18')
+                Bilac - SP
+                @break
+            @default
+                Estado não identificado
+        @endswitch
+        <hr></br>
+    @endfor
 
-    @switch($fornecedoresMultiDimensional[$idxTesteFornecedor]['ddd'])
-        @case('11')
-            São Paulo - SP
-            @break
-        @case('85')
-            Fortaleza - CE
-            @break
-        @case('18')
-            Bilac - SP
-            @break
-        @default
-            Estado não identificado
-    @endswitch
+    <h3>Imprimindo com While</h3></br>
+    @php $i = 0; @endphp
+    @while (isset($fornecedoresMultiDimensional[$i]))
+        Fornecedor: {{ $fornecedoresMultiDimensional[$i]['nome'] }}</br>
+        @php $i++; @endphp
+        <hr></br>
+    @endwhile
+
+    <h3>Imprimindo com FOREACH</h3></br>
+    @foreach ($fornecedoresMultiDimensional as $indice => $fornecedor)
+        Fornecedor: {{ $fornecedor['nome'] }}
+        <hr></br>    
+    @endforeach
+
+    <h3>Imprimindo com FORELSE</h3></br>
+    @php $arrayVazioTeste = []; @endphp
+    @forelse ($arrayVazioTeste as $indice => $fornecedor)
+        Fornecedor: {{ $fornecedor['nome'] }}
+        <hr></br>   
+    @empty
+        Não existem fornecedores cadastrados 
+        <hr></br> 
+    @endforelse
+
+    <h3>Caracter de escape no Blade é feito com um @ antes do mesmo, tal como @{{ teste }}</h3></br>
+    @{{ teste }}
 
 @endisset
+
