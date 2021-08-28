@@ -126,13 +126,29 @@ Status 2: {{ $fornecedoresMultiDimensional[1]['status'] }}
 
     <h3>Imprimindo com FOREACH</h3></br>
     @foreach ($fornecedoresMultiDimensional as $indice => $fornecedor)
+        Iteração atual, utilizando variavel loop: {{ $loop->iteration }}
+        </br>
         Fornecedor: {{ $fornecedor['nome'] }}
+        </br>
+        @if($loop->first)
+            Primeira iteração do loop
+            </br>
+        @endif
+
+        @if($loop->last)
+            Ultima iteração do loop
+            </br>
+            Total de registros: {{ $loop->count }}
+        @endif
+        
         <hr></br>    
     @endforeach
 
     <h3>Imprimindo com FORELSE</h3></br>
     @php $arrayVazioTeste = []; @endphp
     @forelse ($arrayVazioTeste as $indice => $fornecedor)
+        Iteração atual, utilizando variavel loop: {{ $loop->iteration }}
+        </br>
         Fornecedor: {{ $fornecedor['nome'] }}
         <hr></br>   
     @empty
