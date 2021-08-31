@@ -25,5 +25,7 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         \Blade::setEchoFormat('e(utf8_encode(%s))');  
+        //\Illuminate\Support\Facades\Blade::setEchoFormat('e(utf8_encode(%s))');
+        //\Blade::setEchoFormat('e(str_replace(["{{","}}"],"",%s), true)');
     }
 }
