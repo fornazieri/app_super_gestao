@@ -29,7 +29,7 @@
             <span>supergestao@dominio.com.br</span>
         </div>
         <div class="localizacao">
-            <h2>Localização</h2>
+            <h2>LocalizaÃ§Ã£o</h2>
             <img src="{{ asset('img/mapa.png') }}">
         </div>
     </div>
