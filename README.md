@@ -10,14 +10,38 @@ Repositório criado para colocar em prática os exercicios do curso Desenvolvime
 - laravel
 - artisan
 - routes
+  - metodos
+    - get
+    - post
+  - prefix
+  - fallback
+  - propriedades
+    - name
+- MVC
 - blade
+  - @php
+  - @if
+  - @unless
+  - @isset
+  - @for
+  - @switch
+  - @while
+  - @foreach
+  - @forelse
+  - components
+  - partials
+  - @section
+  - $slot
+  - @include
+  - @yield
+  - @csrf (token csrf)
 - .env config
 - sqlite config
 - mysql config
 - migrations
-- - cardinalidade 1:1
-- - cardinalidade 1:n
-- - cardinalidade n:n
+  - cardinalidade 1:1
+  - cardinalidade 1:n
+  - cardinalidade n:n
 
 ## Checklist
 - [x] Aprender sobre qualquer coisa, mas aprender
