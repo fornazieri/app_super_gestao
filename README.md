@@ -8,11 +8,16 @@ Repositório criado para colocar em prática os exercicios do curso Desenvolvime
 ## Principais recursos vistos até o momento
 - composer
 - laravel
-- blade
 - artisan
 - routes
+- blade
 - .env config
+- sqlite config
+- mysql config
 - migrations
+- - cardinalidade 1:1
+- - cardinalidade 1:n
+- - cardinalidade n:n
 
 ## Checklist
 - [x] Aprender sobre qualquer coisa, mas aprender
