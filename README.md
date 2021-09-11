@@ -11,6 +11,8 @@ Repositório criado para colocar em prática os exercicios do curso Desenvolvime
 - blade
 - artisan
 - routes
+- .env config
+- migrations
 
 ## Checklist
 - [x] Aprender sobre qualquer coisa, mas aprender
