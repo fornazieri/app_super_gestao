@@ -42,6 +42,14 @@ Repositório criado para colocar em prática os exercicios do curso Desenvolvime
   - cardinalidade 1:1
   - cardinalidade 1:n
   - cardinalidade n:n
+  - nullable
+  - default
+  - modificador After
+  - Comandos Status, Reset, Refresh e Fresh
+- Eloquent ORM
+  - Tinker
+    - create
+    - fillable
 
 ## Checklist
 - [x] Aprender sobre qualquer coisa, mas aprender
