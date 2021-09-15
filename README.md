@@ -1,5 +1,5 @@
 # App Super Gestão
-Repositório criado para colocar em prática os exercicios do curso Desenvolvimento Web Avançado 2021 com PHP, Laravel e Vue.JS, da plataforma Udemy.
+Repositório criado para colocar em prática os exercícios do curso Desenvolvimento Web Avançado 2021 com PHP, Laravel e Vue.JS, da plataforma Udemy.
 
 ## Versões utilizadas
 - PHP 7.4.6
