@@ -50,6 +50,13 @@ Repositório criado para colocar em prática os exercícios do curso Desenvolvim
   - Tinker
     - create
     - fillable
+    - all()
+    - find()
+    - where() / orWhere()
+      - whereIn()
+      - whereNotIn()
+      - whereBetween()
+      - whereNotBetween()
 
 ## Checklist
 - [x] Aprender sobre qualquer coisa, mas aprender
