@@ -57,6 +57,27 @@ Repositório criado para colocar em prática os exercícios do curso Desenvolvim
       - whereNotIn()
       - whereBetween()
       - whereNotBetween()
+      - whereNull()
+      - whereNotNull()
+      - whereDate()
+      - whereDay()
+      - whereMonth()
+      - whereYear()
+      - whereTime()
+      - whereColumn()
+      - where(function($query){ $query->where()->orWhere(); }) //sub-consultas de operações logicas (grupos de consultas)
+    - orderBy()
+  - Collections
+    - collect([])
+    - first()
+    - last()
+    - reverse()
+    - toArray()
+    - toJson()
+    - pluck()
+    - max()
+    - min()
+    - sum()
 
 ## Checklist
 - [x] Aprender sobre qualquer coisa, mas aprender
